@@ -1510,6 +1510,9 @@ section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.my-div {
+  background-color: #0e0b01; /* Replace with your desired color */
+}
 .contact .info-item+.info-item {
   margin-top: 40px;
 }
@@ -1733,7 +1736,7 @@ section {
 }
 
 .hero form {
-  background: #fff;
+  background: #999999;
   padding: 10px;
   border-radius: 10px;
 }

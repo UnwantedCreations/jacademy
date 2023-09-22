@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
   <title>Jinu's Academy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -17,7 +22,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+  <style>
+    form {
+        background-color: blue; /* Change this to the desired background color */
+    }
+</style>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -48,25 +57,17 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Courses</a></li>
-          <li><a href="pricing.html">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="services.html"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">OET</a></li>
+              <li><a href="#">CBT</a></li>
+              <li><a href="#">IELTS</a></li>
+              <li><a href="#">OSCE</a></li>
+              <li><a href="#">NHS Interview Preparation</a></li>
             </ul>
           </li>
+          <li><a href="pricing.html">Gallery</a></li>
+          
           <li><a href="contact.html">Contact Us</a></li>
           <li><a class="get-a-quote" href="get-a-quote.html">Get a Quote</a></li>
         </ul>
@@ -84,10 +85,52 @@
           <h2 data-aos="fade-up">Most Trusted OET Brand in Kerala</h2>
           <p data-aos="fade-up" data-aos-delay="100">Every student has untapped potential. At Jinu's Academy, we focus on empowering low-level learners, guiding them towards academic excellence through personalized attention and an inclusive learning environment.</p>
 
-         <!-- <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-            <input type="text" class="form-control" placeholder="ZIP code or CitY">
-            <button type="submit" class="btn btn-primary">Search</button>
-          </form> -->
+
+
+
+
+            <div class="container">
+              <form action="" method="post" name="form" id="form">
+                <div class="mb-3">
+                  <label for="name">Name</label>
+                  <input type="text" maxlength="30" class="form-control form-control-sm" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" class="form-control sm" maxlength="13" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" maxlength="20" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="mb-3">
+                  <label for="course">Course</label>
+                  <select class="form-select" id="course" name="course" required>
+                    <option value="oet">OET</option>
+                    <option value="cbt">CBT</option>
+                    <option value="osce">OSCE</option>
+                    <option value="ielts">IELTS</option>
+                  </select>
+                </div><div></div><div></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbw63k3mb8Tbot18XlcJO0tVsxJcJkNJvSwgoRnZKFoh4T0Z_-IANDi4FZeXf1PeK9l_9A/exec'
+          const form = document.forms['form']
+        
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("We'll contact you soon." ))
+              .then(() => {  window.location.reload(); })
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
+
+
+          
 
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
 
@@ -178,7 +221,7 @@
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+            <a href="https://youtu.be/ex48ZfClfZQ" class="glightbox play-btn"></a>
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3>About Us</h3>

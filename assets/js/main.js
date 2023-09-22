@@ -149,4 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+
+  // Send the form data to the Google Apps Script endpoint.
+fetch('https://script.google.com/macros/s/AKfycbxTELtFTTLKMIvVCCg7bJhcCGQA3BAmjaibyHXWseH0PaQ2gbzDy7r-WulPOWDAyd2Vjg/exec', {
+  method: 'POST',
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  // Handle the response from the Google Apps Script endpoint.
+});
+
 });
