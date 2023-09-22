@@ -1738,6 +1738,7 @@ section {
 .hero form {
   background: #999999;
   padding: 10px;
+  width: fit-content;
   border-radius: 10px;
 }
 
@@ -1915,4 +1916,17 @@ section {
 
 .footer .credits a {
   color: #fff;
+}
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E;
 }
