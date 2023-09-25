@@ -161,3 +161,14 @@ fetch('https://script.google.com/macros/s/AKfycbxTELtFTTLKMIvVCCg7bJhcCGQA3BAmja
 });
 
 });
+
+
+$(document).ready(function() {
+  setTimeout(function() {
+      $("#popupForm").fadeIn();
+  }, 5000);
+
+  $("#closePopup").click(function() {
+      $("#popupForm").fadeOut();
+  });
+});

@@ -194,7 +194,7 @@ section {
 
 /*--------------------------------------------------------------
 # Scroll top button
---------------------------------------------------------------*/
+
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -224,6 +224,41 @@ section {
   visibility: visible;
   opacity: 1;
 }
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Whatsapp button
+--------------------------------------------------------------*/
+.whats-button {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.whats-button i {
+  font-size: 24px;
+  color: #000000;
+  line-height: 0;
+}
+
+.whats-button:hover {
+  background: rgba(13, 66, 255, 0.8);
+  color: #fff;
+}
+
+.whats-button.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1929,4 +1964,23 @@ section {
 
 .whatsapp-button:hover {
   background-color: #128C7E;
+}
+
+.popup-form {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.close {
+  font-size: 2rem;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
 }
